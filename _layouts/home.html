@@ -8,12 +8,12 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>{{ page.title }}</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
-    <link href="http://jerome-celle.github.io//css/default.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="http://jerome-celle.github.io//css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{site.url}}/css/default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{site.url}}/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         <div id="header" class="container">
             <div id="logo">
                 <span class="icon icon-cog"></span>
-                <h1><a href="#">Celui Qui Baille</a></h1>
+                <h1><a href="#">{{ site.title }}</a></h1>
             </div>
             <div id="menu">
                 <ul>
@@ -94,26 +94,26 @@
         <div class="container">
             <div class="fbox1">
                 <span class="icon icon-envelope"></span>
-                <span>jeffyer38130@gmail.com</span>
+                <span>{{ site.email }}</span>
             </div>
         </div>
         <div class="container">
             <div class="fbox2">
-                <a href="https://www.linkedin.com/in/j%C3%A9r%C3%B4me-celle-9683b0b9?trk=hp-identity-name"><span class="icon icon-linkedin"></span></a>
-                <span>https://www.linkedin.com/in/j%C3%A9r%C3%B4me-celle-9683b0b9?trk=hp-identity-name</span>
+                <a href="{{ site.linkedin_url }}"><span class="icon icon-linkedin"></span></a>
+                <span>{{ site.linkedin_url }}</span>
             </div>
         </div>
         <div class="container">
             <div class="fbox3">
-                <a href="https://github.com/Jerome-Celle"><span class="icon icon-github"></span></a>
-                <span>jerome-celle</span>
+                <a href="{{ site.github_url }}"><span class="icon icon-github"></span></a>
+                <span>{{ site.github_username }}</span>
             </div>
         </div>
     </div>
     <div id="copyright">
         <p>Ce design est basé sur: <a href="http://templated.co">TEMPLATED</a>.</p>
         <ul class="contact">
-            <li><a href="https://twitter.com/jeffy38130" class="icon icon-twitter"><span>Twitter</span></a></li>
+            <li><a href="{{ site.twitter_url }}" class="icon icon-twitter"><span>Twitter</span></a></li>
         </ul>
     </div>
 </body>
