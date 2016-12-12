@@ -21,8 +21,8 @@
         <div class="inner">
             <a href="index.html" class="logo">Logo</a>
             <nav id="nav">
-                {% for i in site.urls %}
-                <a href="{{ i.url }}">{{ i.text }}</a> {% endfor %}
+                {% for menu in site.menus %}
+                <a href="{{ menu.url }}">{{ menu.text }}</a> {% endfor %}
             </nav>
             <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
         </div>
@@ -39,9 +39,9 @@
                 </div>
                 <ul class="icons">
                     <li><a href="{{ site.email }}" class="icon fa-envelope"><span class="label">Mail</span></a></li>
-                    <li><a href="{{ site.github_url }}" class="icon fa-github"><span class="label">Github</span></a></li>
-                    <li><a href="{{ site.twitter_url }}" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                    <li><a href="{{ site.linkedin_url }}" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
+                    {% for socialMedia in site.socialMedias %}
+                    <li><a href="{{ socialMedia.url }}" class="icon {{ socialMedia.icon }}"><span class="label">{{ socialMedia.label }}</span></a></li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>

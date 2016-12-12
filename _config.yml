@@ -21,7 +21,7 @@ description: >
 baseurl: "" 
 url: "https://jerome-celle.github.io/" 
 
-urls:
+menus:
     - text: Accueil
       url: /
     - text: Projets
@@ -32,11 +32,23 @@ collections:
     output: true
     permalink: /project/:path/
 
-twitter_username: jeffy38130
-twitter_url: https://twitter.com/jeffy38130
-github_username: jerome-celle
-github_url: https://github.com/Jerome-Celle
-linkedin_url: https://www.linkedin.com/in/j%C3%A9r%C3%B4me-celle-9683b0b9?trk=hp-identity-name
+socialMedias:
+  - slug: twitter
+    username: jeffy38130
+    url: https://twitter.com/jeffy38130
+    label: Twitter
+    icon: fa-twitter
+  - slug: github
+    username: jerome-celle
+    url: https://github.com/Jerome-Celle
+    label: Twitter
+    icon: fa-github
+  - slug: linkedin
+    username: ""
+    url: https://www.linkedin.com/in/j%C3%A9r%C3%B4me-celle-9683b0b9?trk=hp-identity-name
+    label: Linkedin
+    icon: fa-linkedin
+
 about: Grand amoureux des sciences, j'ai une affection toute particulière pour les nouvelles technologies en rapport avec l'informatique!
 
 # Build settings
