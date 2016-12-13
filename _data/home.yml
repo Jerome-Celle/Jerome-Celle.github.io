@@ -1,14 +1,19 @@
 past:
     title: Le passé
     description: >
-        J'ai étudié les réseaux et les télécommunications à l'université Joseph Fourrier à Grenoble. <br>
-        Par la suite, j'ai appris les bases du Génie Logiciel à l’École de Technologie Supérieure à Montréal.
-    
+        J'ai étudié les réseaux et les télécommunications à l'université <a href="https://iut1.univ-grenoble-alpes.fr/departement-d-enseignement/reseaux-et-telecommunications">Joseph Fourrier</a> à Grenoble. <br>
+        Par la suite, j'ai appris les bases du Génie Logiciel à l’<a href="http://www.etsmtl.com/Programmes-Etudes/1er-cycle/Bac/7065">École de Technologie Supérieure</a> à Montréal.
+    buttonLabel: Mes expériences
+
 present:
     title: Le présent
-    description: Je suis développeur à Hardis Group et co-fondateur de Supagog.com.
-    
+    description: >
+      Je suis développeur à <a href="http://www.hardis-group.com/">Hardis Group</a> et co-fondateur de <a href="http://supagog.com/">Supagog.com</a>.
+    buttonLabel: En apprendre plus
+
 futur:
     title: Le futur
-    description: ""
-    
+    description: >
+      Si vous cherchez un développeur orienté back-end plus que front-end, sur des langages divers et variés, du Java au Python en passant par le trio HTML/PHP/JS. <br>
+      N'hésitez pas à me contacter!
+    buttonLabel: Me contacter
