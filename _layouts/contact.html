@@ -1,0 +1,51 @@
+---
+layout: subpage
+---
+<div class="flex flex-4 align-center">
+    <article>
+        {% assign socialMedias = site.socialMedias | where : "slug",
+        "linkedin" %}
+        {% for socialMedia in socialMedias %}
+            <a href="{{ socialMedia.url }}" class="icon big {{ socialMedia.icon }}">
+                <span class="label">{{ socialMedia.label }}</span>
+            </a>
+            <br>
+            <!-- Linkedin public badge -->
+            <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+            <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="fr_FR" data-type="vertical" data-theme="light" data-vanity="jeromecelle">
+                <a class="LI-simple-link" href='https://www.linkedin.com/in/j%C3%A9r%C3%B4me-celle-9683b0b9?trk=hp-identity-name'>Jérôme Celle</a>
+            </div>
+        {% endfor %}
+    </article>
+    <article>
+        {% assign socialMedias = site.socialMedias | where : "slug",
+        "twitter" %}
+        {% for socialMedia in socialMedias %}
+            <a href="{{ socialMedia.url }}" class="icon big {{ socialMedia.icon }}">
+                <span class="label">{{ socialMedia.label }}</span>
+            </a>
+            <br>
+            <a href="https://twitter.com/intent/tweet?screen_name={{ socialMedia.username }}" class="twitter-mention-button" data-size="large" data-show-count="false">Tweet to @{{ socialMedia.username }}</a>
+
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        {% endfor %}
+    </article>
+    <article>
+        <a href="{{ site.email }}" class="icon big fa-envelope">
+            <span class="label">Mail</span>
+        </a>
+        <br>
+        <p>{{ site.email }}</p>
+    </article>
+    <article>
+        {% assign socialMedias = site.socialMedias | where : "slug",
+        "github" %}
+        {% for socialMedia in socialMedias %}
+            <a href="{{ socialMedia.url }}" class="icon big {{ socialMedia.icon }}">
+                <span class="label">{{ socialMedia.label }}</span>
+            </a>
+            <br>
+            <iframe src="http://githubbadge.appspot.com/jerome-celle" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
+        {% endfor %}
+    </article>
+</div>
