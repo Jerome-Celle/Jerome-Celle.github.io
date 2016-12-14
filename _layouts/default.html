@@ -23,7 +23,7 @@
             <a href="index.html" class="logo">Logo</a>
             <nav id="nav">
                 {% for menu in site.menus %}
-                <a href="{{ menu.url }}">{{ menu.text }}</a> {% endfor %}
+                <a href="{{ menu.url | absolute_url }}">{{ menu.text }}</a> {% endfor %}
             </nav>
             <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
         </div>
