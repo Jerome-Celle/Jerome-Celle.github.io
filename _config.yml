@@ -21,6 +21,16 @@ description: >
 baseurl: ""
 url: "https://jerome-celle.github.io/"
 
+scripts:
+  - jquery.min.js
+  - skel.min.js
+  - util.js
+  - main.js
+
+stylesheets:
+  - main.css
+  - custom.css
+
 menus:
     - text: Accueil
       url: /

@@ -6,54 +6,66 @@
 -->
 <html>
 
-<head>
-    <title>{{ site.title }}</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{{site.url}}/css/main.css" />
-    <link rel="stylesheet" href="{{site.url}}/css/custom.css" />
-</head>
+    <head>
+        <title>{{ site.title }}</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <!-- stylesheet -->
+        {% for stylesheet in site.stylesheets %}
+            <link rel="stylesheet" href="{{site.url}}/css/{{ stylesheet }}"/>
+        {% endfor %}
+    </head>
 
+    <body class="{{ layout.bodyClass }}">
 
-<body class="{{ layout.bodyClass }}">
-
-    <!-- Header -->
-    <header id="header">
-        <div class="inner">
-            <a href="index.html" class="logo">Logo</a>
-            <nav id="nav">
-                {% for menu in site.menus %}
-                <a href="{{ menu.url | absolute_url }}">{{ menu.text }}</a> {% endfor %}
-            </nav>
-            <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-        </div>
-    </header>
-
-    {{ content }}
-
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="inner">
-            <div class="flex">
-                <div class="copyright">
-                    Ce design est basé sur: <a href="http://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
-                </div>
-                <ul class="icons">
-                    <li><a href="{{ site.email }}" class="icon fa-envelope"><span class="label">Mail</span></a></li>
-                    {% for socialMedia in site.socialMedias %}
-                    <li><a href="{{ socialMedia.url }}" class="icon {{ socialMedia.icon }}"><span class="label">{{ socialMedia.label }}</span></a></li>
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+                <a href="index.html" class="logo">Logo</a>
+                <nav id="nav">
+                    {% for menu in site.menus %}
+                        <a href="{{ menu.url | absolute_url }}">{{ menu.text }}</a>
                     {% endfor %}
-                </ul>
+                </nav>
+                <a href="#navPanel" class="navPanelToggle">
+                    <span class="fa fa-bars"></span>
+                </a>
             </div>
-        </div>
-    </footer>
+        </header>
 
-    <!-- Scripts -->
-    <script src="{{site.url}}/js/jquery.min.js"></script>
-    <script src="{{site.url}}/js/skel.min.js"></script>
-    <script src="{{site.url}}/js/util.js"></script>
-    <script src="{{site.url}}/js/main.js"></script>
+        {{ content }}
 
-</body>
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <div class="flex">
+                    <div class="copyright">
+                        Ce design est basé sur:
+                        <a href="http://templated.co">TEMPLATED</a>. Images:
+                        <a href="https://unsplash.com">Unsplash</a>.
+                    </div>
+                    <ul class="icons">
+                        <li>
+                            <a href="{{ site.email }}" class="icon fa-envelope">
+                                <span class="label">Mail</span>
+                            </a>
+                        </li>
+                        {% for socialMedia in site.socialMedias %}
+                            <li>
+                                <a href="{{ socialMedia.url }}" class="icon {{ socialMedia.icon }}">
+                                    <span class="label">{{ socialMedia.label }}</span>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </footer>
 
+        <!-- Scripts -->
+        {% for script in site.scripts %}
+            <script src="{{site.url}}/js/{{script}}"></script>
+        {% endfor %}
+
+    </body>
 </html>
