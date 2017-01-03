@@ -32,7 +32,7 @@
         
     </head>
 
-    <body class="">
+    <body class="subpage">
 
         <!-- Header -->
         <header id="header">
@@ -53,47 +53,21 @@
             </div>
         </header>
 
-        <!-- Banner -->
-<section id="banner">
-    <h1>Celui Qui Baille</h1>
-    <p>Grand amoureux des sciences, j'ai une affection toute particulière pour les nouvelles technologies en rapport avec l'informatique!</p>
-</section>
-
-<!-- One -->
-<section id="one" class="wrapper">
+        <!-- Three -->
+<section id="three" class="wrapper">
     <div class="inner">
-        <div class="flex flex-3">
-            <article>
-                <header>
-                    <h3>Le passé </h3>
-                </header>
-                <p>J'ai étudié les réseaux et les télécommunications à l'université <a href="https://iut1.univ-grenoble-alpes.fr/departement-d-enseignement/reseaux-et-telecommunications">Joseph Fourrier</a> à Grenoble. <br> Par la suite, j'ai appris les bases du Génie Logiciel à l’<a href="http://www.etsmtl.com/Programmes-Etudes/1er-cycle/Bac/7065">École de Technologie Supérieure</a> à Montréal.
-</p>
-                <footer>
-                    <a href="#" class="button special">Mes expériences</a>
-                </footer>
-            </article>
-            <article>
-                <header>
-                    <h3>Le présent</h3>
-                </header>
-                <p>Je suis développeur à <a href="http://www.hardis-group.com/">Hardis Group</a> et co-fondateur de <a href="http://supagog.com/">Supagog.com</a>.
-</p>
-                <footer>
-                    <a href="#" class="button special">En apprendre plus</a>
-                </footer>
-            </article>
-            <article>
-                <header>
-                    <h3>Le futur</h3>
-                </header>
-                <p>Si vous cherchez un développeur orienté back-end plus que front-end, sur des langages divers et variés, du Java au Python en passant par le trio HTML/PHP/JS. <br> N'hésitez pas à me contacter!
-</p>
-                <footer>
-                    <a href="http://localhost:4000/contact/" class="button special">Me contacter</a>
-                </footer>
-            </article>
-        </div>
+        <header class="align-center">
+            <h2>piCalculator</h2>
+        </header>
+        <script type="text/paperscript" src="http://localhost:4000/js/piCalculator.js" canvas="piCalculatorCanvas"></script>
+<div class="align-center">
+    <canvas id="piCalculatorCanvas" resize="true"></canvas>
+    <div id="piCalculatorResult"></div>
+    <input type="text" name="piMonteCarloNbPoint" id="piMonteCarloNbPoint" value="200">
+    <input type="text" name="piMonteCarloSizePoint" id="piMonteCarloSizePoint" value="2">
+    <button id="bttnPiMonteCarlo" class="button special">New Try</button>
+</div>
+
     </div>
 </section>
 

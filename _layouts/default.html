@@ -12,7 +12,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <!-- stylesheet -->
         {% for stylesheet in site.stylesheets %}
-            <link rel="stylesheet" href="{{site.url}}/css/{{ stylesheet }}"/>
+            <link rel="stylesheet" href="{{site.url}}/css/{{ stylesheet }}.css"/>
+        {% endfor %}
+        <!-- Scripts -->
+        {% for script in site.scripts %}
+            <script src="{{site.url}}/js/{{script}}.js"></script>
         {% endfor %}
     </head>
 
@@ -50,6 +54,7 @@
                                 <span class="label">Mail</span>
                             </a>
                         </li>
+
                         {% for socialMedia in site.socialMedias %}
                             <li>
                                 <a href="{{ socialMedia.url }}" class="icon {{ socialMedia.icon }}">
@@ -57,15 +62,16 @@
                                 </a>
                             </li>
                         {% endfor %}
+
                     </ul>
                 </div>
             </div>
+
+            <!-- Scripts -->
+            {% for script in site.scripts_footer %}
+                <script src="{{site.url}}/js/{{script}}.js"></script>
+            {% endfor %}
+
         </footer>
-
-        <!-- Scripts -->
-        {% for script in site.scripts %}
-            <script src="{{site.url}}/js/{{script}}"></script>
-        {% endfor %}
-
     </body>
 </html>

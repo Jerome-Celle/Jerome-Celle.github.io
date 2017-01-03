@@ -22,14 +22,19 @@ baseurl: ""
 url: "https://jerome-celle.github.io/"
 
 scripts:
-  - jquery.min.js
-  - skel.min.js
-  - util.js
-  - main.js
+  - jquery.min
+  - skel.min
+  - util
+  - paper-full
+  - main
+
+scripts_footer:
+  - paper-full
 
 stylesheets:
-  - main.css
-  - custom.css
+  - main
+  - custom
+  - piCalculator
 
 menus:
     - text: Accueil
